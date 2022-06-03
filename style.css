@@ -1,0 +1,20 @@
+.message{
+  border-radius:5px;
+  width:80%;
+  padding-right:5px;
+  padding-left:5px;
+  margin-bottom: 5px
+}
+
+.me{
+  /*text-align: right;*/
+  justify-content: flex-end
+}
+.other{
+  /*text-align: left;*/
+  justify-content: flex-start
+}
+
+.float-right{
+  background-color: #e9d8f0;
+}

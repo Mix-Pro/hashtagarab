@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+.message{border-radius:5px;width:80%;padding-right:5px;padding-left:5px;margin-bottom:5px;}
+.float-right{background-color:#e9d8f0;}
+:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;}
+*,::after,::before{box-sizing:border-box;}
+html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff;}
+[tabindex="-1"]:focus{outline:0!important;}
+h1{margin-top:0;margin-bottom:.5rem;}
+p{margin-top:0;margin-bottom:1rem;}
+small{font-size:80%;}
+button{border-radius:0;}
+button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color;}
+button,input{margin:0;font-family:inherit;font-size:inherit;line-height:inherit;}
+button,input{overflow:visible;}
+button{text-transform:none;}
+[type=button],button{-webkit-appearance:button;}
+[type=button]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none;}
+h1{margin-bottom:.5rem;font-weight:500;line-height:1.2;}
+h1{font-size:2.5rem;}
+small{font-size:80%;font-weight:400;}
+.container-fluid{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;}
+.form-control{display:block;width:100%;height:calc(1.5em + .75rem + 2px);padding:.375rem .75rem;font-size:1rem;font-weight:400;line-height:1.5;color:#495057;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:.25rem;transition:border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
+@media (prefers-reduced-motion:reduce){
+.form-control{transition:none;}
+}
+.form-control::-ms-expand{background-color:transparent;border:0;}
+.form-control:focus{color:#495057;background-color:#fff;border-color:#80bdff;outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25);}
+.form-control::-webkit-input-placeholder{color:#6c757d;opacity:1;}
+.form-control::-moz-placeholder{color:#6c757d;opacity:1;}
+.form-control:-ms-input-placeholder{color:#6c757d;opacity:1;}
+.form-control::-ms-input-placeholder{color:#6c757d;opacity:1;}
+.form-control::placeholder{color:#6c757d;opacity:1;}
+.form-control:disabled{background-color:#e9ecef;opacity:1;}
+.btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
+@media (prefers-reduced-motion:reduce){
+.btn{transition:none;}
+}
+.btn:hover{color:#212529;text-decoration:none;}
+.btn:focus{outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25);}
+.btn:disabled{opacity:.65;}
+.btn-success{color:#fff;background-color:#28a745;border-color:#28a745;}
+.btn-success:hover{color:#fff;background-color:#218838;border-color:#1e7e34;}
+.btn-success:focus{box-shadow:0 0 0 .2rem rgba(72,180,97,.5);}
+.btn-success:disabled{color:#fff;background-color:#28a745;border-color:#28a745;}
+.btn-outline-success{color:#28a745;border-color:#28a745;}
+.btn-outline-success:hover{color:#fff;background-color:#28a745;border-color:#28a745;}
+.btn-outline-success:focus{box-shadow:0 0 0 .2rem rgba(40,167,69,.5);}
+.btn-outline-success:disabled{color:#28a745;background-color:transparent;}
+.input-group{position:relative;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-align:stretch;align-items:stretch;width:100%;}
+.input-group>.form-control{position:relative;-ms-flex:1 1 auto;flex:1 1 auto;width:1%;margin-bottom:0;}
+.input-group>.form-control:focus{z-index:3;}
+.input-group>.form-control:not(:last-child){border-top-right-radius:0;border-bottom-right-radius:0;}
+.input-group-append{display:-ms-flexbox;display:flex;}
+.input-group-append .btn{position:relative;z-index:2;}
+.input-group-append .btn:focus{z-index:3;}
+.input-group-append{margin-left:-1px;}
+.input-group>.input-group-append>.btn{border-top-left-radius:0;border-bottom-left-radius:0;}
+.modal{position:fixed;top:0;left:0;z-index:1050;display:none;width:100%;height:100%;overflow:hidden;outline:0;}
+.modal-dialog{position:relative;width:auto;margin:.5rem;pointer-events:none;}
+.modal-content{position:relative;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;width:100%;pointer-events:auto;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:.3rem;outline:0;}
+.modal-header{display:-ms-flexbox;display:flex;-ms-flex-align:start;align-items:flex-start;-ms-flex-pack:justify;justify-content:space-between;padding:1rem 1rem;border-bottom:1px solid #dee2e6;border-top-left-radius:.3rem;border-top-right-radius:.3rem;}
+.modal-body{position:relative;-ms-flex:1 1 auto;flex:1 1 auto;padding:1rem;}
+.modal-footer{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:end;justify-content:flex-end;padding:1rem;border-top:1px solid #dee2e6;border-bottom-right-radius:.3rem;border-bottom-left-radius:.3rem;}
+.modal-footer>:not(:first-child){margin-left:.25rem;}
+.modal-footer>:not(:last-child){margin-right:.25rem;}
+@media (min-width:576px){
+.modal-dialog{max-width:500px;margin:1.75rem auto;}
+}
+.float-left{float:left!important;}
+.float-right{float:right!important;}
+.mb-3{margin-bottom:1rem!important;}
+.text-center{text-align:center!important;}
+@media print{
+*,::after,::before{text-shadow:none!important;box-shadow:none!important;}
+p{orphans:3;widows:3;}
+body{min-width:992px!important;}
+}
+    </style>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+    
+    <title>Quick Chat</title>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div id="chat">
+
+      </div>  
+
+      <div style="visibility: hidden; width:100%; padding-right:5px;padding-left:5px;" class="text-center">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Message" aria-label="message" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-success" type="button">Send</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div style="position: fixed; bottom: 0px; width:100%; padding-right:5px;padding-left:5px;" class="text-center">
+      <div class="input-group mb-3">
+        <input id="msgBox" type="text" class="form-control" placeholder="Message" aria-label="message" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button id="send" class="btn btn-outline-success" type="button">Send</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="usernameModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">Enter a username:
+          </div>
+          <div class="modal-body">
+            Welcome to Quick-Chat!<br>
+            No user data is stored. It's 100% anonymous.<br>
+            You can run JS code by starting your message with: /js. Same goes for HTML.<br>
+            Enjoy!<br><br>
+            <input class="form-control" id="username" placeholder="Username" >
+          </div>
+          <div class="modal-footer">
+            <small>Username containing "NoJS" prevents JS execution</small> 
+            <small>Username containing "NoHTML" prevents HTML elements from displaying</small> 
+            <button id="usernameContinue" type="button" class="btn btn-success">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDFRl9i8HKOvSLvetFbP7wv6K2k7OqnEyY",
+      authDomain: "quick-hat.firebaseapp.com",
+      databaseURL: "https://quick-hat.firebaseio.com",
+      projectId: "quick-hat",
+      storageBucket: "",
+      messagingSenderId: "716504678672",
+      appId: "1:716504678672:web:a25259fa1b058c4c842595"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
